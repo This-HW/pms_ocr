@@ -1,0 +1,4 @@
+.env
+/.key
+/images
+.DS_Store
