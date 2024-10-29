@@ -1,9 +1,6 @@
 from azure.cognitiveservices.vision.computervision import ComputerVisionClient
-from azure.cognitiveservices.vision.computervision.models import OperationStatusCodes
 from msrest.authentication import CognitiveServicesCredentials
-import requests
-from io import BytesIO
-import os
+
 
 # Azure Computer Vision 리소스 키와 엔드포인트
 subscription_key = "YOUR_COMPUTER_VISION_SUBSCRIPTION_KEY"

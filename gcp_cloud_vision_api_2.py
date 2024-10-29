@@ -1,12 +1,10 @@
 import io
 import os
 from google.cloud import vision
-from google.cloud.vision_v1 import types
-from pydotenv import Environment
+from dotenv import load_dotenv
 
-
-env = Environment()
-GCP_CREDENTIAL_PATH = env.get('gcp_credential_path')
+load_dotenv()
+GCP_CREDENTIAL_PATH = os.getenv('gcp_credential_path')
 
 # 서비스 계정 키 파일 경로 설정
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = GCP_CREDENTIAL_PATH

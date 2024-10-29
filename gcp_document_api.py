@@ -1,13 +1,13 @@
 import os
-# from google.cloud import documentai_v1beta3 as documentai
-# from google.cloud.documentai_v1beta3 import types
 from google.cloud import documentai
-from pydotenv import Environment
 from google.api_core.client_options import ClientOptions
 
+from dotenv import load_dotenv
+
+
 # 서비스 계정 키 파일 경로 설정
-env = Environment()
-GCP_CREDENTIAL_PATH = env.get('gcp_credential_path')
+load_dotenv()
+GCP_CREDENTIAL_PATH = os.getenv('gcp_credential_path')
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = GCP_CREDENTIAL_PATH
 
 # Document AI 클라이언트 초기화
